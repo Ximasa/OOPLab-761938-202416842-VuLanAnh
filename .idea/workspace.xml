@@ -4,28 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ed80676-2d1e-4cf5-a1f8-e2316bd0f641" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Lab01/ChoosingOption.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Lab01/DisplayATriangle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Lab01/DisplayNumberOfDays.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Lab01/InputFromKeyboard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Lab01/Matrices.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Lab01/NumericArray.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OOPLab-761938-202416842-VuLanAnh.iml" beforeDir="false" afterPath="$PROJECT_DIR$/OOPLab-761938-202416842-VuLanAnh.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/week1/2.2.1/HelloWorld.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lab01/2.2.1/HelloWorld.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/week1/2.2.1/HelloWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lab01/2.2.1/HelloWorld.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/week1/2.2.2/FirstDialog.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lab01/2.2.2/FirstDialog.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/week1/2.2.2/FirstDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lab01/2.2.2/FirstDialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/week1/2.2.3/HelloNameDialog.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lab01/2.2.3/HelloNameDialog.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/week1/2.2.3/HelloNameDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lab01/2.2.3/HelloNameDialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/week1/2.2.4/ShowTwoNumbers.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lab01/2.2.4/ShowTwoNumbers.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/week1/2.2.4/ShowTwoNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lab01/2.2.4/ShowTwoNumbers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/week1/2.2.5/Calculate.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lab01/2.2.5/Calculate.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/week1/2.2.5/Calculate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lab01/2.2.5/Calculate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/week1/2.2.6/Equation.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lab01/2.2.6/Equation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/week1/2.2.6/Equation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lab01/2.2.6/Equation.java" afterDir="false" />
-    </list>
+    <list default="true" id="1ed80676-2d1e-4cf5-a1f8-e2316bd0f641" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,11 +42,12 @@
     "Application.NumericArray.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "master",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/OOP/OOPLab-761938-202416842-VuLanAnh",
@@ -88,7 +68,7 @@
       <option name="presentableId" value="Default" />
       <updated>1774607364463</updated>
       <workItem from="1774607381012" duration="19000" />
-      <workItem from="1774685355122" duration="9050000" />
+      <workItem from="1774685355122" duration="9597000" />
     </task>
     <servers />
   </component>
