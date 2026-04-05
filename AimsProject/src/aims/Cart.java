@@ -128,4 +128,24 @@ public class Cart {
         }
         System.out.println("Total Cost: " + totalCost() + " $\n");
     }
+
+    //14. Working with method overloading
+    //14.1. Overloading by differing types of parameter
+    public void addDigitalVideoDisc_array(DigitalVideoDisc[] dvdList) {
+        for (DigitalVideoDisc disc : dvdList) {
+            addDigitalVideoDisc(disc);
+        }
+    }
+
+    public void addDigitalVideoDisc_varang(DigitalVideoDisc... dvds) {
+        for (DigitalVideoDisc disc : dvds) {
+            addDigitalVideoDisc(disc);
+        }
+    }
+
+    //14.2  Overloading by differing the number of parameters
+    public void addDigitalVideoDisc(DigitalVideoDisc dvd1, DigitalVideoDisc dvd2) {
+        addDigitalVideoDisc(dvd1);
+        addDigitalVideoDisc(dvd2);
+    }
 }
