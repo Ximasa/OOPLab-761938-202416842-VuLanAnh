@@ -7,6 +7,9 @@ public class DigitalVideoDisc {
     private String director;
     private int length;
     private float cost;
+    //16. Classifier Member and Instance Member
+    private static int nbDigitalVideoDiscs = 0;
+    private int id;
 
     //9. Create accessors and mutators for the class DigitalVideoDisc
     public String getTitle() {
@@ -48,6 +51,9 @@ public class DigitalVideoDisc {
     }
 
     public DigitalVideoDisc(String title, String category, String director, int length, float cost) {
+        //16. Classifier Member and Instance Member
+        nbDigitalVideoDiscs++;
+        this.id = nbDigitalVideoDiscs;
         this.title = title;
         this.category = category;
         this.director = director;
