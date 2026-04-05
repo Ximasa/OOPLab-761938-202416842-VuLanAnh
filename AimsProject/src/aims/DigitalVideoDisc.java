@@ -54,4 +54,9 @@ public class DigitalVideoDisc {
         this.length = length;
         this.cost = cost;
     }
+
+    //15. Passing parameter
+    public void setTitle(String title) {
+        this.title = title;
+    }
 }
