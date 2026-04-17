@@ -1,7 +1,9 @@
-package aims;
+package hust.soict.hedspi.aims.cart;
+
+import hust.soict.hedspi.aims.disc.DigitalVideoDisc;
 
 public class Cart {
-    //11. Create the Cart class to work with DigitalVideoDisc
+//11. Create the Cart class to work with DigitalVideoDisc
     public static final int MAX_NUMBERS_ORDERED = 20;
     private DigitalVideoDisc itemsOrdered[] =
             new DigitalVideoDisc[MAX_NUMBERS_ORDERED];
@@ -123,7 +125,7 @@ public class Cart {
     public void printCart() {
         System.out.println("Ordered Items:");
         for (int i = 0; i < qtyOrdered; i++) {
-            System.out.println((i + 1) + ". [ID: " + itemsOrdered[i].getTitle() + " : "
+            System.out.println((i + 1) + ". [ID: " + itemsOrdered[i].getId() + "] " + itemsOrdered[i].getTitle() + " : "
                     + itemsOrdered[i].getCost() + " $\n");
         }
         System.out.println("Total Cost: " + totalCost() + " $\n");

@@ -1,4 +1,7 @@
-package aims;
+package hust.soict.hedspi.aims;
+
+import hust.soict.hedspi.aims.cart.Cart;
+import hust.soict.hedspi.aims.disc.DigitalVideoDisc;
 
 public class Aims {
     public static void main(String[] args) {
@@ -56,6 +59,7 @@ public class Aims {
         System.out.println("Adding 2 DVDs at once:");
         anOrder.addDigitalVideoDisc(dvd5, dvd6);
         anOrder.printCart();
+
 
     }
 }
