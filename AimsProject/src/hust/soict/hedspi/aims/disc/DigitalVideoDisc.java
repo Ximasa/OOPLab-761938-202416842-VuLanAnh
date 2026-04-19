@@ -1,4 +1,4 @@
-package aims;
+package disc;
 
 //8. Create the DigitalVideoDisc class and its attributes
 public class DigitalVideoDisc {
@@ -69,5 +69,25 @@ public class DigitalVideoDisc {
     //16. Classifier Member and Instance Member
     public int getId() {
         return id;
+    }
+
+    //Lab03.4
+    public boolean isMatch(String title) {
+        String lowerTitle = this.getTitle().toLowerCase();
+        String lowerInput = title.toLowerCase();
+        String[] keywords = lowerInput.split("\\s+");
+
+        for (String word : keywords) {
+            if (lowerTitle.contains(word)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    @Override
+    public String toString() {
+        return "DVD - " + this.getTitle() + " - " + this.getCategory() + " - "
+                + this.getDirector() + " - " + this.getLength() + ": " + this.getCost() + " $";
     }
 }

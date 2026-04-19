@@ -1,14 +1,16 @@
-package aims;
+package cart;
+import disc.DigitalVideoDisc;
+import java.util.ArrayList;
 
 public class Cart {
     //11. Create the Cart class to work with DigitalVideoDisc
     public static final int MAX_NUMBERS_ORDERED = 20;
-    private DigitalVideoDisc itemsOrdered[] =
-            new DigitalVideoDisc[MAX_NUMBERS_ORDERED];
+    //private disc.DigitalVideoDisc itemsOrdered[] = new disc.DigitalVideoDisc[MAX_NUMBERS_ORDERED];
+    private ArrayList<DigitalVideoDisc> itemsOrdered = new ArrayList<DigitalVideoDisc>();
     private int qtyOrdered = 0;
 
 
-    public void addDigitalVideoDisc(DigitalVideoDisc disc) {
+    /*public void addDigitalVideoDisc(disc.DigitalVideoDisc disc) {
         if (qtyOrdered < MAX_NUMBERS_ORDERED) {
             itemsOrdered[qtyOrdered] = disc;
             qtyOrdered++;
@@ -18,7 +20,7 @@ public class Cart {
         }
     }
 
-    public void removeDigitalVideoDisc(DigitalVideoDisc disc) {
+    public void removeDigitalVideoDisc(disc.DigitalVideoDisc disc) {
         int index = -1;
         for (int i = 0; i < qtyOrdered; i++) {
             if (itemsOrdered[i] == disc) {
@@ -75,7 +77,7 @@ public class Cart {
         for (int i = 0; i < qtyOrdered - 1; i++) {
             for (int j = 0; j < qtyOrdered - i - 1; j++) {
                 if (itemsOrdered[j].getCost() < itemsOrdered[j + 1].getCost()) {
-                    DigitalVideoDisc temp = itemsOrdered[j];
+                    disc.DigitalVideoDisc temp = itemsOrdered[j];
                     itemsOrdered[j] = itemsOrdered[j + 1];
                     itemsOrdered[j + 1] = temp;
                 }
@@ -88,7 +90,7 @@ public class Cart {
         for (int i = 0; i < qtyOrdered - 1; i++) {
             for (int j = 0; j < qtyOrdered - i - 1; j++) {
                 if (itemsOrdered[j].getTitle().compareToIgnoreCase(itemsOrdered[j+1].getTitle()) > 0) {
-                    DigitalVideoDisc temp = itemsOrdered[j];
+                    disc.DigitalVideoDisc temp = itemsOrdered[j];
                     itemsOrdered[j] = itemsOrdered[j + 1];
                     itemsOrdered[j + 1] = temp;
                 }
@@ -111,11 +113,11 @@ public class Cart {
             System.out.println("Order created successfully!\n");
             System.out.println("Total cost: " + totalCost() + " $\n");
             qtyOrdered = 0;
-            itemsOrdered = new DigitalVideoDisc[MAX_NUMBERS_ORDERED];
+            itemsOrdered = new disc.DigitalVideoDisc[MAX_NUMBERS_ORDERED];
         }
     }
 
-    public void updateQuantity(DigitalVideoDisc disc, int qty) {
+    public void updateQuantity(disc.DigitalVideoDisc disc, int qty) {
         System.out.println("Quantity updated for: " + disc.getTitle() + ".\n");
     }
 
@@ -131,21 +133,73 @@ public class Cart {
 
     //14. Working with method overloading
     //14.1. Overloading by differing types of parameter
-    public void addDigitalVideoDisc_array(DigitalVideoDisc[] dvdList) {
-        for (DigitalVideoDisc disc : dvdList) {
+    public void addDigitalVideoDisc_array(disc.DigitalVideoDisc[] dvdList) {
+        for (disc.DigitalVideoDisc disc : dvdList) {
             addDigitalVideoDisc(disc);
         }
     }
 
-    public void addDigitalVideoDisc_varang(DigitalVideoDisc... dvds) {
-        for (DigitalVideoDisc disc : dvds) {
+    public void addDigitalVideoDisc_varang(disc.DigitalVideoDisc... dvds) {
+        for (disc.DigitalVideoDisc disc : dvds) {
             addDigitalVideoDisc(disc);
         }
     }
 
     //14.2  Overloading by differing the number of parameters
-    public void addDigitalVideoDisc(DigitalVideoDisc dvd1, DigitalVideoDisc dvd2) {
+    public void addDigitalVideoDisc(disc.DigitalVideoDisc dvd1, disc.DigitalVideoDisc dvd2) {
         addDigitalVideoDisc(dvd1);
         addDigitalVideoDisc(dvd2);
+    }*/
+
+    //Lab03.4
+    public void addDigitalVideoDisc(DigitalVideoDisc disc) {
+        itemsOrdered.add(disc);
+        System.out.println("The disc '" + disc.getTitle() + "' has been added.");
+        System.out.println("Current quantity in cart: " + itemsOrdered.size());
+    }
+
+    public float totalCost() {
+        float total = 0.0f;
+        for (DigitalVideoDisc dvd : itemsOrdered) {
+            if (dvd != null) {
+                total += dvd.getCost();
+            }
+        }
+        return total;
+    }
+
+    public void print() {
+        System.out.println("***********************CART***********************");
+        System.out.println("Ordered Items:");
+        for (int i = 0; i < itemsOrdered.size(); i++) {
+            System.out.println((i + 1) + ". " + itemsOrdered.get(i).toString());
+        }
+        System.out.println("Total cost: " + totalCost() + " $");
+        System.out.println("***************************************************");
+    }
+
+    //Tìm theo ID
+    public void search(int id) {
+        boolean found = false;
+        for (DigitalVideoDisc dvd : itemsOrdered) {
+            if (dvd.getId() == id) {
+                System.out.println("Found: " + dvd.toString());
+                found = true;
+                break;
+            }
+        }
+        if (!found) System.out.println("No DVD found with ID: " + id);
+    }
+
+    //Tìm theo Title
+    public void search(String title) {
+        boolean found = false;
+        for (DigitalVideoDisc dvd : itemsOrdered) {
+            if (dvd.isMatch(title)) {
+                System.out.println("Found: " + dvd.toString());
+                found = true;
+            }
+        }
+        if (!found) System.out.println("No DVD found with title: " + title);
     }
 }

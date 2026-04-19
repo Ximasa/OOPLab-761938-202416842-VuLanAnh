@@ -76,7 +76,7 @@
     "to.speed.mode.migration.done": "true",
     "vue.rearranger.settings.migration": "true"
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\OOP\OOPLab-761938-202416842-VuLanAnh\AimsProject" />
@@ -84,19 +84,6 @@
       <recent name="D:\OOP\OOPLab-761938-202416842-VuLanAnh\OtherProjects" />
       <recent name="D:\OOP\OOPLab-761938-202416842-VuLanAnh\OtherProjects\src" />
     </key>
-  </component>
-  <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="OOPLab-761938-202416842-VuLanAnh" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="OOPLab-761938-202416842-VuLanAnh" />
-      <option name="filePath" />
-      <method v="2" />
-    </configuration>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

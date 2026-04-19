@@ -1,4 +1,5 @@
-package aims;
+import cart.Cart;
+import disc.DigitalVideoDisc;
 
 public class Aims {
     public static void main(String[] args) {
@@ -16,7 +17,7 @@ public class Aims {
                 "Animation", null, 0, 18.99f);
         anOrder.addDigitalVideoDisc(dvd3);
 
-        System.out.println("Current cart status:");
+        /* System.out.println("Current cart status:");
         anOrder.printCart();
 
         //13. Removing items from the cart
@@ -55,7 +56,6 @@ public class Aims {
                 88, 15.0f);
         System.out.println("Adding 2 DVDs at once:");
         anOrder.addDigitalVideoDisc(dvd5, dvd6);
-        anOrder.printCart();
-
+        anOrder.printCart(); */
     }
 }
