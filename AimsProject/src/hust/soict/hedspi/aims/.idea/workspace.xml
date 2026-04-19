@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a644c70e-1f19-4264-bfe6-9d361d7dcc71" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../../../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/cart/Cart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/Store.java" beforeDir="false" afterPath="$PROJECT_DIR$/store/Store.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +54,7 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "update__cartL03",
+    "git-widget-placeholder": "update__storeL03",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
@@ -80,6 +78,7 @@
       <workItem from="1776617098810" duration="623000" />
       <workItem from="1776618093514" duration="464000" />
       <workItem from="1776618751407" duration="634000" />
+      <workItem from="1776619587414" duration="216000" />
     </task>
     <servers />
   </component>
