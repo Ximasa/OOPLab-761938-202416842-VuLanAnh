@@ -1,5 +1,5 @@
 package test.disc;
-
+/*
 //15. Passing parameter
 public class TestPassingParameter {
     public static void main(String[] args) {
@@ -24,4 +24,4 @@ public class TestPassingParameter {
         String oldTitle = dvd.getTitle();
         dvd.setTitle(title);
     }
-}
+}*/

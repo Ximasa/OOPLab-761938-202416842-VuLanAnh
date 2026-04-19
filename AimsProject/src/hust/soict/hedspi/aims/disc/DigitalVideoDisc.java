@@ -134,4 +134,14 @@ import media.Playable;
         System.out.println("Playing DVD: " + this.getTitle());
         System.out.println("DVD length: " + this.getLength());
     }
+
+    //Lab 3.16
+    @Override
+    public String toString() {
+        return "DVD [ID: " + getId() + ", Title: " + getTitle() +
+                ", Category: " + getCategory() +
+                ", Director: " + getDirector() +
+                ", Length: " + getLength() +
+                ", Cost: " + getCost() + "$]";
+    }
 }

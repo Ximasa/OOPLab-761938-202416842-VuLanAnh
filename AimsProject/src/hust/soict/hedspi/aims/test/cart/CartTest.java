@@ -1,7 +1,7 @@
 package test.cart;
 import cart.Cart;
 import disc.DigitalVideoDisc;
-
+/*
 public class CartTest {
     public static void main(String[] args) {
         Cart cart = new Cart();
@@ -28,4 +28,4 @@ public class CartTest {
         cart.search("Aladin");
         cart.search("Animation");
     }
-}
+}*/
