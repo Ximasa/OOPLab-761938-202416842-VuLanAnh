@@ -1,4 +1,5 @@
 package disc;
+import media.Disc;
 import media.Media;
 
 //8. Create the DigitalVideoDisc class and its attributes
@@ -93,7 +94,7 @@ import media.Media;
     }
 }*/
 
-    //Lab03.9
+    /*Lab03.9
     public class DigitalVideoDisc extends Media {
         private String director;
         private int length;
@@ -102,15 +103,19 @@ import media.Media;
             super(id, title, category, cost); // Gọi constructor của class Media
             this.director = director;
             this.length = length;
+        }*/
+
+    //Lab 3.10
+    public class DigitalVideoDisc extends Disc {
+
+        public DigitalVideoDisc(int id, String title, String category, float cost, int length, String director) {
+            super(id, title, category, cost, length, director);
         }
 
-        public String getDirector() { return director; }
-        public int getLength() { return length; }
-
         public void play() {
-            if (this.length > 0) {
+            if (this.getLength() > 0) {
                 System.out.println("Playing DVD: " + this.getTitle());
-                System.out.println("DVD length: " + this.length);
+                System.out.println("DVD length: " + this.getLength());
             } else {
                 System.out.println("ERROR: DVD length is 0 or less!");
             }
