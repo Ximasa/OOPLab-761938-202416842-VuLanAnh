@@ -1,6 +1,6 @@
 import cart.Cart;
 import disc.DigitalVideoDisc;
-
+/*
 public class Aims {
     public static void main(String[] args) {
         //12. Create Carts of DigitalVideoDiscs
@@ -56,6 +56,6 @@ public class Aims {
                 88, 15.0f);
         System.out.println("Adding 2 DVDs at once:");
         anOrder.addDigitalVideoDisc(dvd5, dvd6);
-        anOrder.printCart(); */
+        anOrder.printCart();
     }
-}
+}*/
