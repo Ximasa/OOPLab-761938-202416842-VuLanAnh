@@ -27,4 +27,19 @@ public abstract class Media {
 
     public float getCost() { return cost; }
     //public void setCost(float cost) { this.cost = cost; }
+
+    //Lab 3.15
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null || !(obj instanceof Media)) {
+            return false;
+        }
+
+        Media other = (Media) obj;
+
+        if (this.title == null) {
+            return other.title == null;
+        }
+        return this.title.equalsIgnoreCase(other.title);
+    }
 }

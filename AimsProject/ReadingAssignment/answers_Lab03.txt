@@ -5,3 +5,8 @@ Trong hệ thống AIMS, các lớp đóng vai trò là "Cái toàn thể" (Whol
 -Lớp CompactDisc (CD): Đây là lớp tụ tập của lớp Track. Một đĩa CD chứa một danh sách các bài hát/track.
 
 Về việc khởi tạo: Tất cả các Constructor của các lớp toàn thể này (Store, Cart, CompactDisc) đều đã được kiểm tra để đảm bảo khởi tạo các danh sách tương ứng ngay khi đối tượng được tạo ra. Việc khởi tạo này giúp ngăn chặn lỗi NullPointerException khi thực hiện các thao tác thêm mới thành phần.
+
+//Lab 3.15
+If the passing object is not an instance of Media, what happens?
+-> Trả lời:
+Nếu đối tượng truyền vào không phải là một instance của Media, dòng code obj instanceof Media sẽ trả về false. Nhờ đó, hàm equals sẽ trả về false ngay lập tức thay vì cố gắng ép kiểu. Nếu chúng ta không kiểm tra instanceof mà trực tiếp ép kiểu (Media) obj, chương trình sẽ văng lỗi ClassCastException và bị crash.
