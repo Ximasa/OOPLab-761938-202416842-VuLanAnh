@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a644c70e-1f19-4264-bfe6-9d361d7dcc71" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/test/media/PolymorphismTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Aims.java" beforeDir="false" afterPath="$PROJECT_DIR$/Aims.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/StoreTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/store/StoreTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/disc/TestPassingParameter.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/disc/TestPassingParameter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/cart/Cart.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +57,7 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "polymorshism",
+    "git-widget-placeholder": "consoleapp",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
