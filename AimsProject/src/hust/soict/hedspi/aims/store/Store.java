@@ -31,7 +31,13 @@ public class Store {
     }*/
 
     //Lab 3.13
-    private ArrayList<Media> itemsInStore = new ArrayList<Media>();
+    //private ArrayList<Media> itemsInStore = new ArrayList<Media>();
+    private ArrayList<Media> itemsInStore;
+
+    public Store() {
+        this.itemsInStore = new ArrayList<Media>();
+    }
+
     public void addMedia(Media media) {
         if (!itemsInStore.contains(media)) {
             itemsInStore.add(media);

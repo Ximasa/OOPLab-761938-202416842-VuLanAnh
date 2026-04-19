@@ -1,0 +1,7 @@
+//Lab 03.14
+Trong hệ thống AIMS, các lớp đóng vai trò là "Cái toàn thể" (Whole) và chứa các "Thành phần" (Part) thông qua mối quan hệ Tụ tập (Aggregation) bao gồm:
+
+-Lớp Store và Cart: Cả hai lớp này đều là tập hợp của lớp Media. Một cửa hàng (Store) hay một giỏ hàng (Cart) sẽ quản lý một danh sách các đối tượng Media. Mối quan hệ này cho thấy các đối tượng Media có thể tồn tại độc lập bên ngoài vòng đời của Store hay Cart.
+-Lớp CompactDisc (CD): Đây là lớp tụ tập của lớp Track. Một đĩa CD chứa một danh sách các bài hát/track.
+
+Về việc khởi tạo: Tất cả các Constructor của các lớp toàn thể này (Store, Cart, CompactDisc) đều đã được kiểm tra để đảm bảo khởi tạo các danh sách tương ứng ngay khi đối tượng được tạo ra. Việc khởi tạo này giúp ngăn chặn lỗi NullPointerException khi thực hiện các thao tác thêm mới thành phần.
