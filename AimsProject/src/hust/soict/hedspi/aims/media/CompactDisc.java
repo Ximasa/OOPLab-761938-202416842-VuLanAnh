@@ -2,7 +2,10 @@ package media;
 
 import java.util.ArrayList;
 
-public class CompactDisc extends Disc {
+/*Lab 3.10
+public class CompactDisc extends Disc { */
+public class CompactDisc extends Disc implements Playable {
+
     private String artist;
     private ArrayList<Track> tracks = new ArrayList<Track>();
 
@@ -42,5 +45,18 @@ public class CompactDisc extends Disc {
             totalLength += track.getLength();
         }
         return totalLength;
+    }
+
+    //Lab 3.11
+    @Override
+    public void play() {
+        System.out.println("Playing CD: " + this.getTitle() + " by " + this.getArtist());
+        System.out.println("CD total length: " + this.getLength());
+        System.out.println("----------");
+
+        // Duyệt qua danh sách track và gọi hàm play() của từng track
+        for (Track track : tracks) {
+            track.play();
+        }
     }
 }
