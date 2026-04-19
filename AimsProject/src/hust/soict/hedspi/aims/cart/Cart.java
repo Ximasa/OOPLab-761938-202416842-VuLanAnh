@@ -1,6 +1,8 @@
 package cart;
 import disc.DigitalVideoDisc;
 import java.util.ArrayList;
+import java.util.Collections;
+
 import media.Media;
 
 public class Cart {
@@ -249,6 +251,21 @@ public class Cart {
         }
         System.out.println("Total cost: " + totalCost() + " $");
         System.out.println("***************************************************");
+    }
+
+    //Lab 3.18
+    public ArrayList<Media> getItemsOrdered() {
+        return itemsOrdered;
+    }
+
+    public void sortByTitle() {
+        Collections.sort(itemsOrdered, Media.COMPARE_BY_TITLE_COST);
+        System.out.println("Cart has been sorted by title.");
+    }
+
+    public void sortByCost() {
+        Collections.sort(itemsOrdered, Media.COMPARE_BY_COST_TITLE);
+        System.out.println("Cart has been sorted by cost.");
     }
 }
 
