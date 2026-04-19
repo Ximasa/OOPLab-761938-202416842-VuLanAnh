@@ -151,7 +151,7 @@ public class Cart {
         addDigitalVideoDisc(dvd2);
     }*/
 
-    //Lab03.5
+    //Lab03.4
     public void addDigitalVideoDisc(DigitalVideoDisc disc) {
         itemsOrdered.add(disc);
         System.out.println("The disc '" + disc.getTitle() + "' has been added.");
