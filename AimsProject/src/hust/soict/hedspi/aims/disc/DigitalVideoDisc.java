@@ -1,6 +1,7 @@
 package disc;
 import media.Disc;
 import media.Media;
+import media.Playable;
 
 //8. Create the DigitalVideoDisc class and its attributes
 /*public class DigitalVideoDisc {
@@ -105,14 +106,14 @@ import media.Media;
             this.length = length;
         }*/
 
-    //Lab 3.10
+    /*Lab 3.10
     public class DigitalVideoDisc extends Disc {
 
-        public DigitalVideoDisc(int id, String title, String category, float cost, int length, String director) {
+    public DigitalVideoDisc(int id, String title, String category, float cost, int length, String director) {
             super(id, title, category, cost, length, director);
         }
 
-        public void play() {
+    public void play() {
             if (this.getLength() > 0) {
                 System.out.println("Playing DVD: " + this.getTitle());
                 System.out.println("DVD length: " + this.getLength());
@@ -120,4 +121,17 @@ import media.Media;
                 System.out.println("ERROR: DVD length is 0 or less!");
             }
         }
+    */
+
+    //Lab 3.11
+    public class DigitalVideoDisc extends Disc implements Playable {
+        public DigitalVideoDisc(int id, String title, String category, float cost, int length, String director) {
+            super(id, title, category, cost, length, director);
+        }
+
+    @Override
+    public void play() {
+        System.out.println("Playing DVD: " + this.getTitle());
+        System.out.println("DVD length: " + this.getLength());
     }
+}

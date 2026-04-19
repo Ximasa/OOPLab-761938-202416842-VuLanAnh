@@ -1,6 +1,11 @@
 package media;
 
-public class Track {
+/*Lab3.10
+public class Track {*/
+
+//Lab 3.11
+public class Track implements Playable {
+
     private String title;
     private int length;
 
@@ -19,5 +24,12 @@ public class Track {
             return (this.title.equals(tmp.getTitle()) && this.length == tmp.getLength());
         }
         return false;
+    }
+
+    //Lab 3.11
+    @Override
+    public void play() {
+        System.out.println("Playing track: " + this.getTitle());
+        System.out.println("Track length: " + this.getLength());
     }
 }
