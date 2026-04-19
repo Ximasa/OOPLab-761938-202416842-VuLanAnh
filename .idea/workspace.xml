@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1ed80676-2d1e-4cf5-a1f8-e2316bd0f641" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/OtherProjects/src/hust/soict/hedspi/garbage/ConcatenationInLoops.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OtherProjects/src/hust/soict/hedspi/garbage/GarbageCreator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OtherProjects/src/hust/soict/hedspi/garbage/NoGarbage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OtherProjects/src/hust/soict/hedspi/garbage/OOP-Lab03-ObjectOrientedTechniques.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OtherProjects/.idea/OtherProjects.iml" beforeDir="false" afterPath="$PROJECT_DIR$/OtherProjects/.idea/OtherProjects.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AimsProject/Design/UMLClassDiagram.asta" beforeDir="false" afterPath="$PROJECT_DIR$/AimsProject/Design/UMLClassDiagram.asta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AimsProject/Requirement/UseCaseDiagram.asta" beforeDir="false" afterPath="$PROJECT_DIR$/AimsProject/Requirement/UseCaseDiagram.asta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +63,7 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "concat__loop",
+    "git-widget-placeholder": "main",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/OOP/OOPLab-761938-202416842-VuLanAnh",
@@ -105,7 +102,7 @@
       <workItem from="1776417350663" duration="79000" />
       <workItem from="1776417552341" duration="1653000" />
       <workItem from="1776419234433" duration="530000" />
-      <workItem from="1776577240079" duration="1266000" />
+      <workItem from="1776593346044" duration="1254000" />
     </task>
     <servers />
   </component>
