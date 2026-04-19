@@ -71,7 +71,7 @@ public class DigitalVideoDisc {
         return id;
     }
 
-    //Lab03.5
+    //Lab03.4
     public boolean isMatch(String title) {
         String lowerTitle = this.getTitle().toLowerCase();
         String lowerInput = title.toLowerCase();
