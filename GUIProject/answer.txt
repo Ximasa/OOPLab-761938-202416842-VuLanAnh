@@ -1,0 +1,8 @@
+1.3. So sánh AWT và Swing:
+- Về container: AWT cho phép thêm thành phần trực tiếp vào Frame, trong khi Swing yêu cầu thêm vào Content Pane thông qua hàm getContentPane().
+
+- Về tên gọi: Các lớp trong Swing thường có thêm tiền tố "J" để phân biệt (ví dụ: AWT dùng Button, Label còn Swing dùng JButton, JLabel).
+
+- Về cơ chế xử lý: Cả hai đều dùng mô hình lắng nghe sự kiện, nhưng Swing linh hoạt hơn nhờ hỗ trợ các lớp action mạnh mẽ, giúp đồng bộ hóa nhiều thành phần giao diện cùng lúc.
+
+- Về bản chất: AWT là heavyweight vì sử dụng giao diện của hệ điều hành, dẫn đến việc hiển thị không đồng nhất giữa các máy. Ngược lại, Swing là lightweight, tự vẽ bằng mã Java nên giao diện luôn nhất quán và cho phép thay đổi phong cách dễ dàng.
