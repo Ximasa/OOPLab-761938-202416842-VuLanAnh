@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
+//2.2.1
 public class NumberGrid extends JFrame {
     private JButton[] btnNumbers = new JButton[10];
     private JButton btnDelete, btnReset;
@@ -32,6 +33,7 @@ public class NumberGrid extends JFrame {
         new NumberGrid();
     }
 
+//2.2.2
     void addButtons(JPanel panelButtons) {
         ButtonListener btnListener = new ButtonListener();
 
@@ -58,6 +60,7 @@ public class NumberGrid extends JFrame {
         btnReset.addActionListener(btnListener);
     }
 
+//2.2.3
     private class ButtonListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
