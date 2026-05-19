@@ -42,4 +42,5 @@ public class MediaStore extends JPanel {
 
         this.setBorder(BorderFactory.createLineBorder(Color.BLACK));
     }
+
 }

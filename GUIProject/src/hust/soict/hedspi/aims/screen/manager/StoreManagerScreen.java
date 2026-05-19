@@ -3,8 +3,10 @@ package hust.soict.hedspi.aims.screen.manager;
 import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
-import hust.soict.hedspi.aims.store.Store;
-import hust.soict.hedspi.aims.media.Media;
+
+import hust.soict.hedspi.aims.disc.DigitalVideoDisc;
+import hust.soict.hedspi.aims.store.*;
+import hust.soict.hedspi.aims.media.*;
 
 //3.1.1
 public class StoreManagerScreen extends JFrame {
@@ -69,18 +71,43 @@ public class StoreManagerScreen extends JFrame {
         return header;
     }
 
-//3.1.3
+// 3.1.3
     JPanel createCenter() {
         JPanel center = new JPanel();
         center.setLayout(new GridLayout(3, 3, 2, 2));
 
         ArrayList<Media> mediaInStore = store.getItemsInStore();
-        //Chỉ hiển thị tối đa 9 sản phẩm lên lưới 3x3
-        for (int i = 0; i < Math.min(mediaInStore.size(), 9); i++) {
-            MediaStore cell = new MediaStore(mediaInStore.get(i));
-            center.add(cell);
+
+        for (int i = 0; i < 9; i++) {
+            if (i < mediaInStore.size()) {
+                //Nếu ô này đã có sản phẩm thực tế trong kho, hiển thị thẻ sản phẩm đó
+                MediaStore cell = new MediaStore(mediaInStore.get(i));
+                center.add(cell);
+            } else {
+                //Nếu ô này chưa có sản phẩm, nạp một JPanel trống vào để giữ khung
+                JPanel emptyCell = new JPanel();
+                center.add(emptyCell);
+            }
         }
 
         return center;
     }
+
+//3.1.5
+public static void main(String[] args) {
+    //Khởi tạo một cửa hàng
+    Store myStore = new Store();
+
+    //Thêm một vài dữ liệu mẫu để hiển thị lên GUI
+    DigitalVideoDisc dvd1 = new DigitalVideoDisc("The Lion King", "Animation", "Roger Allers", 87, 19.95f);
+    DigitalVideoDisc dvd2 = new DigitalVideoDisc("Star Wars", "Science Fiction", "George Lucas", 124, 24.95f);
+    DigitalVideoDisc dvd3 = new DigitalVideoDisc("Aladdin", "Animation", 18.99f);
+
+    myStore.addMedia(dvd1);
+    myStore.addMedia(dvd2);
+    myStore.addMedia(dvd3);
+
+    //Khởi chạy màn hình quản lý
+    new StoreManagerScreen(myStore);
+}
 }
