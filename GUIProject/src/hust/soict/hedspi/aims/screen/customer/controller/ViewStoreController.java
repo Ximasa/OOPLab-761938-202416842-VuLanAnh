@@ -8,9 +8,9 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 
 import java.io.IOException;
+import java.net.URL;
 
 public class ViewStoreController {
-
     @FXML
     private GridPane gridPane;
 
@@ -21,8 +21,19 @@ public class ViewStoreController {
     }
 
     @FXML
+    void btnViewCartPressed(javafx.event.ActionEvent event) {
+    }
+
+    @FXML
     public void initialize() {
-        final String ITEM_FXML_FILE_PATH = "/hust/soict/hedspi/aims/screen/customer/view/Item.fxml";
+        try {
+            java.net.URL storeURL = getClass().getResource("/hust/soict/hedspi/aims/screen/customer/view/Store.fxml");
+            if (storeURL != null) {
+                java.io.File dir = new java.io.File(storeURL.toURI()).getParentFile();
+            }
+        } catch (Exception e) {
+        }
+        // -------------------------------------------------------------
 
         int column = 0;
         int row = 1;
@@ -30,14 +41,18 @@ public class ViewStoreController {
         for (int i = 0; i < store.getItemsInStore().size(); i++) {
             try {
                 FXMLLoader fxmlLoader = new FXMLLoader();
-                fxmlLoader.setLocation(getClass().getResource(ITEM_FXML_FILE_PATH));
+                java.net.URL fxmlLocation = getClass().getResource("/hust/soict/hedspi/aims/screen/customer/view/Item.fxml");
 
+                if (fxmlLocation == null) {
+                    System.out.println("⚠️ Không tìm thấy file Item.fxml, bỏ qua sản phẩm thứ " + (i + 1));
+                    continue;
+                }
+
+                fxmlLoader.setLocation(fxmlLocation);
                 ItemController itemController = new ItemController();
                 fxmlLoader.setController(itemController);
 
-                AnchorPane anchorPane = new AnchorPane();
-                anchorPane = fxmlLoader.load();
-
+                AnchorPane anchorPane = fxmlLoader.load();
                 itemController.setData(store.getItemsInStore().get(i));
 
                 if (column == 3) {
@@ -51,6 +66,10 @@ public class ViewStoreController {
             } catch (IOException e) {
                 e.printStackTrace();
             }
+
+
         }
+
     }
+
 }
