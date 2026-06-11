@@ -44,7 +44,6 @@ public class ViewStoreController {
                 java.net.URL fxmlLocation = getClass().getResource("/hust/soict/hedspi/aims/screen/customer/view/Item.fxml");
 
                 if (fxmlLocation == null) {
-                    System.out.println("⚠️ Không tìm thấy file Item.fxml, bỏ qua sản phẩm thứ " + (i + 1));
                     continue;
                 }
 
