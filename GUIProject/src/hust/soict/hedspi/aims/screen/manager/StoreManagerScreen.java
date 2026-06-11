@@ -212,9 +212,13 @@ public static void main(String[] args) {
     DigitalVideoDisc dvd2 = new DigitalVideoDisc("Star Wars", "Science Fiction", "George Lucas", 124, 24.95f);
     DigitalVideoDisc dvd3 = new DigitalVideoDisc("Aladdin", "Animation", 18.99f);
 
-    myStore.addMedia(dvd1);
-    myStore.addMedia(dvd2);
-    myStore.addMedia(dvd3);
+    try {
+        myStore.addMedia(dvd1);
+        myStore.addMedia(dvd2);
+        myStore.addMedia(dvd3);
+    } catch (hust.soict.hedspi.aims.exception.LimitExceededException e) {
+        e.printStackTrace();
+    }
 
     //Khởi chạy màn hình quản lý
     new StoreManagerScreen(myStore);

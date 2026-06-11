@@ -6,3 +6,8 @@
 - Về cơ chế xử lý: Cả hai đều dùng mô hình lắng nghe sự kiện, nhưng Swing linh hoạt hơn nhờ hỗ trợ các lớp action mạnh mẽ, giúp đồng bộ hóa nhiều thành phần giao diện cùng lúc.
 
 - Về bản chất: AWT là heavyweight vì sử dụng giao diện của hệ điều hành, dẫn đến việc hiển thị không đồng nhất giữa các máy. Ngược lại, Swing là lightweight, tự vẽ bằng mã Java nên giao diện luôn nhất quán và cho phép thay đổi phong cách dễ dàng.
+
+// Lab05 - Part 11
+Lý do cần xử lý ngoại lệ cho phương thức play():
+- Ngăn sập ứng dụng: Nếu không bắt ngoại lệ, lỗi phát sinh sẽ làm chương trình kết thúc đột ngột hoặc gây treo luồng giao diện trong JavaFX.
+- Cải thiện trải nghiệm người dùng: Việc chủ động bắt lỗi cho phép hiển thị hộp thoại cảnh báo như dùng Alert trong JavaFX hoặc JOptionPane trong Swing, giúp người dùng tiếp tục thao tác mà không bị văng khỏi phần mềm.

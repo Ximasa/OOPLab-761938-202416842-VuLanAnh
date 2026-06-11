@@ -35,12 +35,20 @@ public class ItemController {
     @FXML
     void btnAddToCartClicked(ActionEvent event) {
         if (cart != null && media != null) {
-            cart.addMedia(media);
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Add to Cart");
-            alert.setHeaderText(null);
-            alert.setContentText("The media " + media.getTitle() + " has been added to your cart.");
-            alert.showAndWait();
+            try {
+                cart.addMedia(media);
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Add to Cart");
+                alert.setHeaderText(null);
+                alert.setContentText("The media " + media.getTitle() + " has been added to your cart.");
+                alert.showAndWait();
+            } catch (hust.soict.hedspi.aims.exception.LimitExceededException e) {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Error");
+                alert.setHeaderText(null);
+                alert.setContentText(e.getMessage());
+                alert.showAndWait();
+            }
         }
     }
 

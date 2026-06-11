@@ -1,6 +1,7 @@
 package hust.soict.hedspi.test.screen.customer.store;
 
 import hust.soict.hedspi.aims.disc.DigitalVideoDisc;
+import hust.soict.hedspi.aims.exception.LimitExceededException;
 import hust.soict.hedspi.aims.store.Store;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -38,9 +39,13 @@ public class TestCartScreen extends Application {
         CompactDisc cd = new CompactDisc(2, "Harry Potter and the Chamber of Secrets", "Fantasy", 3.5f);
         Book book = new Book(3, "Green Eggs and Ham", "Children", 5.0f);
 
-        cart.addMedia(dvd);
-        cart.addMedia(cd);
-        cart.addMedia(book);
+        try {
+            cart.addMedia(dvd);
+            cart.addMedia(cd);
+            cart.addMedia(book);
+        } catch (hust.soict.hedspi.aims.exception.LimitExceededException e) {
+            e.printStackTrace();
+        }
 
         launch(args);
     }
