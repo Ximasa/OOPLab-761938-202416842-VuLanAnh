@@ -1,5 +1,6 @@
 package hust.soict.hedspi.aims.media;
 
+import hust.soict.hedspi.aims.exception.PlayerException;
 import java.util.ArrayList;
 
 /*Lab 3.10
@@ -101,7 +102,7 @@ public class CompactDisc extends hust.soict.hedspi.aims.media.Disc implements hu
     }
 
     @Override
-    public void play() {
+    public void play() throws PlayerException {
         if (this.getLength() > 0) {
             System.out.println("Playing CD: " + this.getTitle() + " by " + this.getArtist());
             System.out.println("CD total length: " + this.getLength());
@@ -110,7 +111,7 @@ public class CompactDisc extends hust.soict.hedspi.aims.media.Disc implements hu
                 track.play();
             }
         } else {
-            System.out.println("ERROR: CD length is 0 or less, cannot be played!");
+            throw new PlayerException("ERROR: CD length is 0 or less!");
         }
     }
 

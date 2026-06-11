@@ -1,6 +1,7 @@
 //Lab 4.3.1.5
 package hust.soict.hedspi.aims.disc;
 
+import hust.soict.hedspi.aims.exception.PlayerException;
 import hust.soict.hedspi.aims.media.Disc;
 import hust.soict.hedspi.aims.media.Playable;
 
@@ -30,12 +31,12 @@ public class DigitalVideoDisc extends Disc implements Playable {
     }
 
     @Override
-    public void play() {
+    public void play() throws PlayerException {
         if (this.getLength() > 0) {
             System.out.println("Playing DVD: " + this.getTitle());
             System.out.println("DVD length: " + this.getLength());
         } else {
-            System.out.println("ERROR: DVD length is 0 or less, cannot be played!");
+            throw new PlayerException("ERROR: DVD length is 0 or less!");
         }
     }
 

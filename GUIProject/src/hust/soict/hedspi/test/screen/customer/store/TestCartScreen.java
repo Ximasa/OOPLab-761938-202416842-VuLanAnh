@@ -1,6 +1,7 @@
 package hust.soict.hedspi.test.screen.customer.store;
 
 import hust.soict.hedspi.aims.disc.DigitalVideoDisc;
+import hust.soict.hedspi.aims.store.Store;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -13,13 +14,14 @@ import hust.soict.hedspi.aims.screen.customer.controller.CartController;
 
 public class TestCartScreen extends Application {
     private static Cart cart;
+    private static Store store;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
         String CART_FXML_FILE_PATH = "/hust/soict/hedspi/aims/screen/customer/view/Cart.fxml";
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(CART_FXML_FILE_PATH));
 
-        CartController cartController = new CartController(cart);
+        CartController cartController = new CartController(cart, store);
         fxmlLoader.setController(cartController);
 
         Parent root = fxmlLoader.load();
@@ -30,6 +32,7 @@ public class TestCartScreen extends Application {
 
     public static void main(String[] args) {
         cart = new Cart();
+        store = new Store();
 
         DigitalVideoDisc dvd = new DigitalVideoDisc(1, "Harry Potter and the Philosopher's Stone", "Fantasy", 3.0f);
         CompactDisc cd = new CompactDisc(2, "Harry Potter and the Chamber of Secrets", "Fantasy", 3.5f);

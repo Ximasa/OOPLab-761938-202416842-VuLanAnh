@@ -1,5 +1,6 @@
 package hust.soict.hedspi.test.screen.customer.store;
 
+import hust.soict.hedspi.aims.cart.Cart;
 import hust.soict.hedspi.aims.disc.DigitalVideoDisc;
 import hust.soict.hedspi.aims.screen.customer.controller.ViewStoreController;
 import hust.soict.hedspi.aims.store.Store;
@@ -11,6 +12,7 @@ import javafx.stage.Stage;
 
 public class TestViewStoreScreen extends Application {
     private static Store store;
+    private static Cart cart;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -18,7 +20,7 @@ public class TestViewStoreScreen extends Application {
 
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(STORE_FXML_FILE_PATH));
 
-        ViewStoreController viewStoreController = new ViewStoreController(store);
+        ViewStoreController viewStoreController = new ViewStoreController(store, cart);
         fxmlLoader.setController(viewStoreController);
 
         Parent root = fxmlLoader.load();
@@ -30,6 +32,7 @@ public class TestViewStoreScreen extends Application {
 
     public static void main(String[] args) {
         store = new Store();
+        cart = new Cart();
 
         DigitalVideoDisc dvd1 = new DigitalVideoDisc("The Lion King", "Animation", "Roger Allers", 87, 19.95f);
         store.addMedia(dvd1);
