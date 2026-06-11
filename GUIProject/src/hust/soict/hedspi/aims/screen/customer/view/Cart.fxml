@@ -51,13 +51,13 @@
                </padding>
                <children>
                   <Label text="Filter" />
-                  <TextField />
-                  <RadioButton mnemonicParsing="false" selected="true" text="By ID">
+                  <TextField fx:id="tfFilter" />
+                  <RadioButton fx:id="radioBtnFilterId" mnemonicParsing="false" onAction="#btnFilterTypePressed" selected="true" text="By ID">
                      <toggleGroup>
-                        <ToggleGroup fx:id="filterCategory" />
+                        <ToggleGroup fx:id="filterGroup" />
                      </toggleGroup>
                   </RadioButton>
-                  <RadioButton mnemonicParsing="false" text="By Title" toggleGroup="$filterCategory" />
+                  <RadioButton fx:id="radioBtnFilterTitle" mnemonicParsing="false" onAction="#btnFilterTypePressed" text="By Title" toggleGroup="$filterGroup" />
                </children>
             </HBox>
             <TableView fx:id="tblMedia" prefHeight="200.0" prefWidth="200.0">

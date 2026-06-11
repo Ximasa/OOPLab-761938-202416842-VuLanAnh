@@ -19,6 +19,12 @@ public class CompactDisc extends hust.soict.hedspi.aims.media.Disc implements hu
         super();
     }*/
 
+    //Lab 5.6
+    public CompactDisc(int id, String title, String category, float cost) {
+        super(id, title, category, cost);
+        this.tracks = new ArrayList<hust.soict.hedspi.aims.media.Track>();
+    }
+
     public CompactDisc(int id, String title, String category, float cost, int length, String director, String artist) {
         super(id, title, category, cost, length, director);
         this.artist = artist;
