@@ -1,5 +1,7 @@
 package hust.soict.hedspi.aims.media;
 
+import hust.soict.hedspi.aims.exception.PlayerException;
+
 /*Lab3.10
 public class Track {*/
 
@@ -28,9 +30,13 @@ public class Track implements Playable {
 
     //Lab 3.11
     @Override
-    public void play() {
-        System.out.println("Playing track: " + this.getTitle());
-        System.out.println("Track length: " + this.getLength());
+    public void play() throws PlayerException {
+        if (this.getLength() > 0) {
+            System.out.println("Playing track: " + this.getTitle());
+            System.out.println("Track length: " + this.getLength());
+        } else {
+            throw new PlayerException("ERROR: Track length is 0 or less!");
+        }
     }
 
     //Lab 3.15
