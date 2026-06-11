@@ -34,12 +34,14 @@ public class AddBookToStoreScreen extends AddItemToStoreScreen {
             float cost = Float.parseFloat(tfCost.getText());
 
             Book book = new Book(++nbBooks, title, category, cost);
-            store.addMedia(book);
-
-            JOptionPane.showMessageDialog(this, "Book added successfully!");
-
-            new StoreManagerScreen(store);
-            this.dispose();
+            try {
+                store.addMedia(book);
+                JOptionPane.showMessageDialog(this, "Book added successfully!");
+                new StoreManagerScreen(store);
+                this.dispose();
+            } catch (hust.soict.hedspi.aims.exception.LimitExceededException ex) {
+                JOptionPane.showMessageDialog(this, ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+            }
         });
         centerPanel.add(new JLabel(""));
         centerPanel.add(btnAdd);

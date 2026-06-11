@@ -25,11 +25,19 @@ public class MediaStore extends JPanel {
         if (media instanceof Playable) {
             JButton playButton = new JButton("Play");
             playButton.addActionListener(e -> {
-                //Hiển thị Dialog thông báo khi nhấn Play
-                JOptionPane.showMessageDialog(null,
-                        "Playing: " + media.getTitle(),
-                        "Media Player",
-                        JOptionPane.INFORMATION_MESSAGE);
+                try {
+                    ((Playable) media).play();
+                    //Hiển thị Dialog thông báo khi nhấn Play
+                    JOptionPane.showMessageDialog(null,
+                            media.toString(),
+                            "Media Player",
+                            JOptionPane.INFORMATION_MESSAGE);
+                } catch (hust.soict.hedspi.aims.exception.PlayerException ex) {
+                    JOptionPane.showMessageDialog(null,
+                            ex.getMessage(),
+                            "Error",
+                            JOptionPane.ERROR_MESSAGE);
+                }
             });
             container.add(playButton);
         }

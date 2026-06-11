@@ -43,11 +43,14 @@ public class AddDigitalVideoDiscToStoreScreen extends AddItemToStoreScreen {
             float cost = Float.parseFloat(tfCost.getText());
 
             DigitalVideoDisc dvd = new DigitalVideoDisc(title, category, director, length, cost);
-            store.addMedia(dvd);
-
-            JOptionPane.showMessageDialog(this, "DVD added successfully!");
-            new StoreManagerScreen(store);
-            this.dispose();
+            try {
+                store.addMedia(dvd);
+                JOptionPane.showMessageDialog(this, "DVD added successfully!");
+                new StoreManagerScreen(store);
+                this.dispose();
+            } catch (hust.soict.hedspi.aims.exception.LimitExceededException ex) {
+                JOptionPane.showMessageDialog(this, ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+            }
         });
         centerPanel.add(new JLabel(""));
         centerPanel.add(btnAdd);

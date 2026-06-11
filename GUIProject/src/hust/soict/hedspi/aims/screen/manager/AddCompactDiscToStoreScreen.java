@@ -49,11 +49,14 @@ public class AddCompactDiscToStoreScreen extends AddItemToStoreScreen {
             float cost = Float.parseFloat(tfCost.getText());
 
             CompactDisc cd = new CompactDisc(++nbCDs, title, category, cost, length, director, artist);
-            store.addMedia(cd);
-
-            JOptionPane.showMessageDialog(this, "CD added successfully!");
-            new StoreManagerScreen(store);
-            this.dispose();
+            try {
+                store.addMedia(cd);
+                JOptionPane.showMessageDialog(this, "CD added successfully!");
+                new StoreManagerScreen(store);
+                this.dispose();
+            } catch (hust.soict.hedspi.aims.exception.LimitExceededException ex) {
+                JOptionPane.showMessageDialog(this, ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+            }
         });
         centerPanel.add(new JLabel(""));
         centerPanel.add(btnAdd);
